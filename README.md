@@ -2,86 +2,72 @@
 
 A WPF desktop application for designing and simulating deterministic finite automata.
 
-The project was created as part of the **Programming in Graphical Environment** course. The main goal of the application is to provide an interactive environment where the user can create a finite automaton visually, modify its elements, save it to a file, load it again, and then simulate how the automaton processes a given input word.
+The project was created as part of the **Programming in Graphical Environment** course. The application allows the user to create a finite automaton visually, edit its elements, save and load it from a file, and simulate how it processes an input word.
 
 ## Project Description
 
-The application combines two main functionalities: an automaton editor and a runtime simulation environment.
+The application consists of two main parts: an automaton editor and a runtime simulation environment.
 
-The editor is used to create and modify the structure of a deterministic finite automaton. The user can add states, move them on the canvas, mark them as initial or accepting, create transitions between them, and customize their visual appearance.
+The editor is used to build the automaton on a canvas. The user can add states, move them, mark them as initial or accepting, create transitions between them, and customize their appearance.
 
-The runtime environment is used to simulate the automaton on a given input word. During the simulation, the application shows the current state, the processed symbol, the active transition, and the final result of the computation.
+The runtime environment is used to test the automaton on a given input word. During the simulation, the application highlights the current state, processed symbol, and active transition. At the end, it shows whether the word was accepted or rejected.
 
 ## Automaton Editor
 
-In the editor, states are displayed as circles on the canvas. Each newly added state is automatically named using consecutive labels such as `q0`, `q1`, `q2`, and so on.
+States are displayed as circles and are automatically named as `q0`, `q1`, `q2`, etc.
 
-The user can select a state by clicking on it. The selected state is visually highlighted, which makes it clear which element is currently active. States can also be moved around the canvas using mouse interaction.
+The user can select a state, move it on the canvas, mark it as initial or accepting, and delete it. The application keeps exactly one initial state, so when a new state is marked as initial, the previous one is unmarked.
 
-Each state can be marked as initial or accepting. The application ensures that the automaton has exactly one initial state. When another state is marked as initial, the previous initial state automatically loses this role. Accepting states are visually distinguished from regular states.
-
-The editor also allows deleting states. When a state is deleted, transitions connected with that state are removed as well.
+Accepting states and the currently selected state are visually highlighted.
 
 ## Transitions
 
-Transitions are used to describe how the automaton moves from one state to another after reading an input symbol.
+Transitions define how the automaton moves between states after reading input symbols.
 
-The user can create transitions between states and assign labels to them. A transition label may contain one symbol or multiple symbols separated by commas. These labels define the alphabet used by the automaton.
+The user can create transitions between states and assign labels to them. Labels may contain one symbol or multiple symbols separated by commas.
 
-The application supports regular transitions, self-loops, and transitions in both directions between two states. Transition arrows and labels are displayed on the canvas, so the structure of the automaton is easy to read. When two states have transitions in both directions, the transitions are drawn in a way that avoids overlapping.
+The application supports regular transitions, self-loops, and transitions in both directions between two states. Arrows and labels are displayed on the canvas to make the automaton easier to read.
 
 ## State Customization
 
-The selected state can be customized using controls available in the user interface.
-
-The user can change:
+For the selected state, the user can modify:
 
 - Fill color
 - Border color
 - Radius
 - Border thickness
 
-These properties are updated through data binding, so changes are immediately visible on the canvas.
+The changes are immediately visible on the canvas.
 
 ## Import and Export
 
-The application allows saving and loading automata using JSON files.
+The application supports importing and exporting automata using JSON files.
 
-An automaton can be imported from a JSON file, and the imported data is validated before being loaded into the editor. If the file contains invalid data, the application displays an appropriate error message.
-
-The user can also export a created automaton to a JSON file. Additionally, the automaton drawing can be exported as an image, which can be useful for documentation or reports.
+Imported files are validated before loading. The user can also export the automaton drawing as an image.
 
 ## Simulation
 
-The runtime environment allows the user to test how the automaton processes an input word.
+The user enters an input word, and the application checks whether it contains only symbols from the automaton alphabet.
 
-Before the simulation starts, the user enters a word. The application checks whether the word contains only symbols from the current automaton alphabet.
-
-During the simulation, the currently processed symbol is highlighted. The current state and the active transition are also highlighted, which makes it easier to follow the computation.
-
-After the simulation finishes, the application displays information about whether the input word was accepted or rejected by the automaton.
+During simulation, the current state, processed symbol, and active transition are highlighted. After the computation finishes, the application displays whether the word was accepted or rejected.
 
 ## Step-by-Step Mode
 
 In step-by-step mode, the user controls the simulation manually.
 
-The `Next` button moves the computation to the next step, while the `Previous` button returns to the previous step. This makes it possible to observe how the automaton changes its current state while processing the input word.
-
-The application also updates the computation history during this process.
+The `Next` button moves to the next step, and the `Previous` button returns to the previous step. The computation history is updated together with the simulation progress.
 
 ## Animation Mode
 
-In animation mode, the automaton processes the input word automatically.
+In animation mode, the automaton processes the word automatically.
 
-The user can start, stop, and reset the simulation. The animation speed can also be adjusted using a slider.
-
-This mode allows observing the full computation without manually clicking through every step.
+The user can start, stop, reset the simulation, and adjust the animation speed using a slider.
 
 ## Computation History
 
-The application stores the computation history for the processed word.
+The application displays the computation history for the processed word.
 
-Each history entry shows which state was active and which symbol was processed at a given step. This helps understand how the automaton reached its final result and makes the simulation easier to analyze.
+Each entry shows the active state and the processed symbol, which makes it easier to follow the automaton's behavior.
 
 ## Technologies Used
 
