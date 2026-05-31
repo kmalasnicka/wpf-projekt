@@ -1,4 +1,4 @@
-\# DFA Automaton Editor and Simulator
+# DFA Automaton Editor and Simulator
 
 
 
@@ -10,7 +10,7 @@ The project was created as part of the \*\*Programming in Graphical Environment\
 
 
 
-\## Project Description
+## Project Description
 
 
 
@@ -42,11 +42,11 @@ The application also stores the computation history, showing which state was act
 
 
 
-\## Features
+## Features
 
 
 
-\### Automaton Editing
+### Automaton Editing
 
 
 
@@ -76,7 +76,7 @@ The application also stores the computation history, showing which state was act
 
 
 
-\### State Customization
+### State Customization
 
 
 
@@ -98,7 +98,7 @@ These properties are edited through the user interface and updated using data bi
 
 
 
-\### Import and Export
+### Import and Export
 
 
 
@@ -116,7 +116,7 @@ The application allows the user to:
 
 
 
-\### Simulation
+### Simulation
 
 
 
@@ -142,7 +142,7 @@ The simulation includes:
 
 
 
-\### Step-by-Step Mode
+### Step-by-Step Mode
 
 
 
@@ -160,7 +160,7 @@ In this mode, the user controls the simulation manually.
 
 
 
-\### Animation Mode
+### Animation Mode
 
 
 
@@ -186,7 +186,7 @@ The user can pause the simulation, reset it to the initial state, or change the 
 
 
 
-\## Technologies Used
+## Technologies Used
 
 
 
@@ -205,18 +205,3 @@ The user can pause the simulation, reset it to the initial state, or change the 
 \- ObservableCollection
 
 \- INotifyPropertyChanged
-
-
-
-\## How to Run
-
-
-
-1\. Clone the repository:
-
-
-
-```sh
-
-git clone https://github.com/kmalasnicka/wpf-projekt.git
-
