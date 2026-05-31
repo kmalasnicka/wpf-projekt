@@ -1,0 +1,22 @@
+{
+  "states": [
+    {
+      "name": "q0",
+      "x": 50,
+      "y": 50,
+      "isInitial": true,
+      "isAccepting": false,
+      "fillColor": "White",
+      "edgeColor": "Black",
+      "radius": 25,
+      "edgeThickness": 2
+    }
+  ],
+  "transitions": [
+    {
+      "source": "q0",
+      "target": "q1",
+      "label": "a"
+    }
+  ]
+}

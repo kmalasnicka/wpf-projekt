@@ -1,0 +1,230 @@
+{
+  "states": [
+    {
+      "name": "q0",
+      "x": 341,
+      "y": 158,
+      "isInitial": false,
+      "isAccepting": false,
+      "fillColor": "LightBlue",
+      "edgeColor": "Green",
+      "radius": 25.33396946564887,
+      "edgeThickness": 4.066265060240961
+    },
+    {
+      "name": "q1",
+      "x": 21,
+      "y": 147,
+      "isInitial": false,
+      "isAccepting": true,
+      "fillColor": "Yellow",
+      "edgeColor": "Black",
+      "radius": 30.009541984732845,
+      "edgeThickness": 2
+    },
+    {
+      "name": "q2",
+      "x": 116,
+      "y": 158,
+      "isInitial": true,
+      "isAccepting": false,
+      "fillColor": "LightPink",
+      "edgeColor": "Purple",
+      "radius": 18.320610687022896,
+      "edgeThickness": 3.8975903614457774
+    },
+    {
+      "name": "q3",
+      "x": 227,
+      "y": 155,
+      "isInitial": false,
+      "isAccepting": false,
+      "fillColor": "LightGreen",
+      "edgeColor": "Black",
+      "radius": 24.666030534351147,
+      "edgeThickness": 4.972891566265056
+    },
+    {
+      "name": "q4",
+      "x": 465,
+      "y": 155,
+      "isInitial": false,
+      "isAccepting": false,
+      "fillColor": "LightPink",
+      "edgeColor": "Black",
+      "radius": 25,
+      "edgeThickness": 3.4548192771084296
+    },
+    {
+      "name": "q5",
+      "x": 554,
+      "y": 143,
+      "isInitial": false,
+      "isAccepting": false,
+      "fillColor": "LightBlue",
+      "edgeColor": "Blue",
+      "radius": 38,
+      "edgeThickness": 3
+    },
+    {
+      "name": "q6",
+      "x": 713,
+      "y": 142,
+      "isInitial": false,
+      "isAccepting": false,
+      "fillColor": "LightGreen",
+      "edgeColor": "Purple",
+      "radius": 42.49999999999999,
+      "edgeThickness": 3.623493975903611
+    },
+    {
+      "name": "q7",
+      "x": 884,
+      "y": 153,
+      "isInitial": false,
+      "isAccepting": false,
+      "fillColor": "LightPink",
+      "edgeColor": "Blue",
+      "radius": 29.743975903614473,
+      "edgeThickness": 2
+    },
+    {
+      "name": "q8",
+      "x": 978,
+      "y": 155,
+      "isInitial": false,
+      "isAccepting": false,
+      "fillColor": "LightBlue",
+      "edgeColor": "Green",
+      "radius": 34.90963855421688,
+      "edgeThickness": 8
+    }
+  ],
+  "transitions": [
+    {
+      "source": "q2",
+      "target": "q1",
+      "label": "merkury"
+    },
+    {
+      "source": "q0",
+      "target": "q1",
+      "label": "ziemia"
+    },
+    {
+      "source": "q1",
+      "target": "q2",
+      "label": "markury"
+    },
+    {
+      "source": "q1",
+      "target": "q0",
+      "label": "ziemia"
+    },
+    {
+      "source": "q1",
+      "target": "q1",
+      "label": "slonce"
+    },
+    {
+      "source": "q0",
+      "target": "q0",
+      "label": "ksiezyc"
+    },
+    {
+      "source": "q3",
+      "target": "q1",
+      "label": "wenus"
+    },
+    {
+      "source": "q1",
+      "target": "q3",
+      "label": "wenus"
+    },
+    {
+      "source": "q4",
+      "target": "q1",
+      "label": "mars"
+    },
+    {
+      "source": "q1",
+      "target": "q4",
+      "label": "mars"
+    },
+    {
+      "source": "q5",
+      "target": "q1",
+      "label": "jowisz"
+    },
+    {
+      "source": "q1",
+      "target": "q5",
+      "label": "jowisz"
+    },
+    {
+      "source": "q6",
+      "target": "q1",
+      "label": "saturn"
+    },
+    {
+      "source": "q1",
+      "target": "q6",
+      "label": "saturn"
+    },
+    {
+      "source": "q7",
+      "target": "q1",
+      "label": "uran "
+    },
+    {
+      "source": "q1",
+      "target": "q7",
+      "label": "uran "
+    },
+    {
+      "source": "q1",
+      "target": "q8",
+      "label": "neptun"
+    },
+    {
+      "source": "q2",
+      "target": "q3",
+      "label": "1"
+    },
+    {
+      "source": "q3",
+      "target": "q0",
+      "label": "2"
+    },
+    {
+      "source": "q0",
+      "target": "q4",
+      "label": "3"
+    },
+    {
+      "source": "q4",
+      "target": "q5",
+      "label": "4"
+    },
+    {
+      "source": "q5",
+      "target": "q6",
+      "label": "5"
+    },
+    {
+      "source": "q6",
+      "target": "q7",
+      "label": "6"
+    },
+    {
+      "source": "q7",
+      "target": "q8",
+      "label": "7"
+    },
+    {
+      "source": "q8",
+      "target": "q1",
+      "label": "8"
+    }
+  ]
+}
