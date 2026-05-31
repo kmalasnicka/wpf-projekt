@@ -5,7 +5,9 @@ A WPF desktop application for designing and simulating deterministic finite auto
 ## Project Description
 
 The application consists of an automaton editor and a runtime simulation environment.
+
 In the editor, the user can create states, move them on the canvas, mark them as initial or accepting, create transitions, and customize the appearance of states.
+
 The runtime environment allows testing the automaton on an input word. During simulation, the current state, processed symbol, and active transition are highlighted. After the computation finishes, the application shows whether the word was accepted or rejected.
 
 ## Automaton Editor
@@ -18,6 +20,7 @@ The application keeps exactly one initial state. When another state is marked as
 
 Transitions describe moves between states for specific input symbols.
 The user can create transitions between states and assign labels to them. Labels may contain one symbol or multiple symbols separated by commas.
+
 The application supports regular transitions, self-loops, and transitions in both directions between two states. Arrows and labels are displayed on the canvas.
 
 ## State Customization
